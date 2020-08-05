@@ -10,12 +10,10 @@ jobs:
   build:
 
     runs-on: macos-latest
-    env: 
-      working-directory: ./ActionTest
 
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+      run: xcodebuild -scheme ActionTest
+    # - name: Run tests
+    #   run: swift test -v
